@@ -9,11 +9,11 @@ const { logoAnchorTheme } = Astro.props;
 
 <div class={`logo_anchor ${logoAnchorTheme ? logoAnchorTheme : ""}`} aria-label="Return to home page">
 	<div class="current_logo">
-		<LogoGroups group="consulting"/>
+		<LogoGroups group={logoAnchorTheme}/>
 	</div>
 
 	<div class="psai_groups_nav">
-		<a href="#" class="">
+		<a href="https://psai.consulting" class="">
 			<LogoGroups group="consulting"/>
 		</a>
 
