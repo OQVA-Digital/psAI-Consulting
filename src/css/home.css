@@ -29,6 +29,27 @@ section + hr {
 }
 
 .intro .waves svg {
+    
+}
+
+section.centered.padding {
+    display: flex;
+    flex-direction: column;
+    min-height: 69vh;
+    min-height: 69svh;
+    position: relative;
+    margin-block: calc(4vh + 8rem) clamp(4rem, 40vw, 22rem);
+}
+
+section.centered.padding > .ctnr {
+    position: relative;
+    z-index: 1;
+    width: var(--width-1);
+    margin-inline: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 6vmin, 3rem);
 }
 
 .intro > .ctnr .logo {
