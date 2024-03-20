@@ -134,6 +134,7 @@ section.centered.padding > .ctnr {
     font-weight: 600;
     line-height: 1.5;
     margin-bottom: 1.5rem;
+    margin-inline: auto;
     color: var(--secondary-1);
 }
 
