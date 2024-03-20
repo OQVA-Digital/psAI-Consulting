@@ -1,5 +1,5 @@
 ---
-const { title, description, keywords, logoAnchorTheme } = Astro.props;
+const { title, description, keywords, currentGroupTheme } = Astro.props;
 
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from "../../consts";
 
@@ -11,7 +11,7 @@ import MailBubble from '../components/MailBubble.astro';
 import CookieConsentBanner from "../components/CookieConsentBanner.astro";
 import OQVABadge from "../components/OQVABadge.astro";
 	
-	import ContactBox from '../components/ContactBox.astro';
+import ContactBox from '../components/ContactBox.astro';
 ---
 
 <!doctype html>
@@ -26,7 +26,7 @@ import OQVABadge from "../components/OQVABadge.astro";
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-587VFLN8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
-		<Header logoAnchorTheme="group"/>
+		<Header currentGroupTheme={currentGroupTheme}/>
 
 		<MailBubble/>
 
@@ -37,5 +37,7 @@ import OQVABadge from "../components/OQVABadge.astro";
         <CookieConsentBanner/>
 
 		<ContactBox/>
+		
+		<OQVABadge/>
 	</body>
 </html>

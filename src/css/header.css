@@ -386,6 +386,7 @@ header .subnav a.psai_define_style .text strong {
         -o-transform: scale(1);
         /* box-shadow: 0rem 1.3rem 2rem -1.5rem rgb(248 248 255 / 60%); */
     }
+    
 
     header .subnav a::before {
         content: "";

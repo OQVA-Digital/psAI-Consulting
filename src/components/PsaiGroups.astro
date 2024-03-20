@@ -3,13 +3,13 @@ import LogoGroups from "./svg/LogoGroups.astro";
 
 import '../css/psai-groups.css'
 
-const { logoAnchorTheme } = Astro.props;
+const { currentGroupTheme, group } = Astro.props;
 
 ---
 
-<div class={`logo_anchor ${logoAnchorTheme ? logoAnchorTheme : ""}`} aria-label="Return to home page">
+<div class={`logo_anchor ${currentGroupTheme ? currentGroupTheme : ""}`} aria-label="Return to home page">
 	<div class="current_logo">
-		<LogoGroups group={logoAnchorTheme}/>
+		<LogoGroups group={group}/>
 	</div>
 
 	<div class="psai_groups_nav">
