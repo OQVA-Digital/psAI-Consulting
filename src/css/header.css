@@ -21,7 +21,7 @@ header {
     border-radius: clamp(2rem, 3vw, 5rem);
     border: 0.1rem solid var(--light-1);
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 header .contact_bt {
     width: fit-content;
