@@ -121,7 +121,7 @@ header .hambt path {
 .subnav .ctnr {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 3vw, 2.5rem);
+    gap: clamp(1rem, 3vw, 3.5rem);
 }
 
 header .subnav a {
@@ -131,12 +131,12 @@ header .subnav a {
     flex-direction: column;
     justify-content: space-between;
     gap: clamp(0.2rem, 4vw, 2rem);
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
-    border: 0.1rem solid var(--light);
+    border-radius: 3.5rem 3.5rem 3.5rem 3rem;
+    -webkit-border-radius: 3.5rem 3.5rem 3.5rem 3rem;
+    -moz-border-radius: 3.5rem 3.5rem 3.5rem 3rem;
+    -ms-border-radius: 3.5rem 3.5rem 3.5rem 3rem;
+    -o-border-radius: 3.5rem 3.5rem 3.5rem 3rem;
+    border: 0.4rem solid var(--light);
 }
 
 header .subnav a > .flex {
@@ -214,7 +214,7 @@ header .subnav a .text b, header .subnav a .text strong {
     animation-play-state: paused;
 }
 
-.subnav a:hover svg path {
+.subnav:hover svg path {
     animation-play-state: running;
 }
 
@@ -373,6 +373,7 @@ header .subnav a.psai_define_style .text strong {
     }
 
     header .subnav a {
+        position: relative;
         transition: transform 0.3s ease;
         -webkit-transition: transform 0.3s ease;
         -moz-transition: transform 0.3s ease;
@@ -383,9 +384,33 @@ header .subnav a.psai_define_style .text strong {
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
-        box-shadow: 0rem 1.3rem 2rem -1.5rem rgb(248 248 255 / 60%);
-               
-}
+        /* box-shadow: 0rem 1.3rem 2rem -1.5rem rgb(248 248 255 / 60%); */
+    }
+
+    header .subnav a::before {
+        content: "";
+        position: absolute;
+        bottom: calc(100% - 0.5rem);
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        border-top: 0.8rem solid var(--light);
+        border-right: 0.8rem solid var(--light);
+        border-bottom: 0.8rem solid transparent;
+        border-left: 0.8rem solid transparent;
+        width: 0;
+        height: 0;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+    }
+
+    header .subnav a.psai_define_style::before {
+        border-top-color: var(--secondary-1);
+        border-right-color: var(--secondary-1);
+    }
 
     header .subnav a:hover {
         transform: scale(1.01);
@@ -440,7 +465,7 @@ header .subnav a.psai_define_style .text strong {
         -moz-transform: translateY(100%);
         -ms-transform: translateY(100%);
         -o-transform: translateY(100%);
-        padding-top: 1.5rem;
+        padding-top: clamp(1.5rem, 3vw, 3rem);
         opacity: 0;
         visibility: hidden;
         transition-delay: 0.8s;
