@@ -249,7 +249,7 @@ section.centered.intro > .ctnr {
     gap: clamp(2rem, 6vmin, 2rem);
 }
 
-section.width1.margin_block {
+.centered.padding {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -260,7 +260,7 @@ section.width1.margin_block {
     margin-block: calc(4vh + 8rem) clamp(4rem, 40vw, 22rem);
 }
 
-section.width1.margin_block > .ctnr {
+.centered.padding > .ctnr {
     position: relative;
     z-index: 1;
     width: var(--width-1);
