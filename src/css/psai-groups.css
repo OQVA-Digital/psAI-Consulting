@@ -11,8 +11,14 @@
     font-weight: 700;
 }
 
+.light .current_logo .psai.logo {
+    font-weight: 400;
+} .light .current_logo .psai.logo b {
+    font-weight: 550;
+}
+
 .psai.logo .group {
-    font-size: 0.35em;
+    font-size: 0.33em;
     position: absolute;
     bottom:-1rem;
     right:0;
@@ -40,10 +46,6 @@
 
 .logo_anchor.light div.current_logo {
     color:var(--light);
-}
-
-.logo_anchor .current_logo svg {
-
 }
 
 .psai_groups_nav {
