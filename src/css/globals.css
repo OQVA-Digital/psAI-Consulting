@@ -225,7 +225,7 @@ svg {
     overflow: visible;
 }
 
-section.centered.intro {
+.centered.padding {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -236,7 +236,7 @@ section.centered.intro {
     margin-block: calc(4vh + 8rem) clamp(4rem, 40vw, 22rem);
 }
 
-section.centered.intro > .ctnr {
+.centered.padding > .ctnr {
     position: relative;
     z-index: 1;
     width: var(--width-1);
