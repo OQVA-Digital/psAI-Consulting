@@ -1,5 +1,4 @@
 ---
-import '../css/home.css'
 
 import Layout from '../layouts/Layout.astro';
 
@@ -43,6 +42,12 @@ import Define from '../components/svg/services/DefineSVG.astro'
 import Flow from '../components/svg/services/FlowSVG.astro'
 import Run from '../components/svg/services/RunSVG.astro'
 ---
+
+<style>
+    body::before {
+        background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-30deg, #0e0925, #060823);
+    }
+</style>
 
 <Layout logoAnchorTheme="dark">
 <main>

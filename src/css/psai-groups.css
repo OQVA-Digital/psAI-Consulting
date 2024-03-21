@@ -1,5 +1,21 @@
 :root {
-    --group-logo-width: clamp(9rem, 21vmin, 11rem);
+    --group-logo-width: clamp(9rem, 28vmin, 11rem);
+}
+
+.psai.logo {
+    font-size: clamp(3.5rem, 14vw, 5.5rem);
+    font-weight: 550;
+    position: relative;
+    width: fit-content;
+} .psai.logo b {
+    font-weight: 700;
+}
+
+.psai.logo .group {
+    font-size: 0.35em;
+    position: absolute;
+    bottom:-1rem;
+    right:0;
 }
 
 .logo_anchor .current_logo {
@@ -44,23 +60,23 @@
 }
 
 .psai_groups_bg {
-    /* display: none !important; */
-    pointer-events: none;
+    /*display: none !important;
+    */pointer-events: none;
     position: fixed;
     top: 0;
     bottom: 0;
-    width: clamp(10rem, 100vw, 38rem);
-    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(110deg, #d2a5ff 10%, #58f9d2 40%, transparent 85%);
+    width: clamp(10rem, 100vw, 62rem);
+    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(105deg, #d2a5ff 10%, #58f9d2 40%, transparent 85%);
     height: 100%;
     -webkit-mask-image: linear-gradient(90deg, black 15rem, transparent);
     z-index: 7;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
-    -webkit-transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
-    -moz-transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
-    -ms-transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
-    -o-transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
+    transition: opacity 1.3s ease-in, visibility 1.3s ease-in;
+    -webkit-transition: opacity 1.3s ease-in, visibility 1.3s ease-in;
+    -moz-transition: opacity 1.3s ease-in, visibility 1.3s ease-in;
+    -ms-transition: opacity 1.3s ease-in, visibility 1.3s ease-in;
+    -o-transition: opacity 1.3s ease-in, visibility 1.3s ease-in;
 }
 
 .psai_groups_bg.show {
@@ -88,10 +104,10 @@
     -ms-transition: transform 1.2s ease, opacity 0.4s ease, visibility 0.4s ease;
     -o-transition: transform 1.2s ease, opacity 0.4s ease, visibility 0.4s ease;
     transition-delay: 0.1s;
-    padding-block: clamp(1rem, 5vw, 2.5rem);
+    padding-block: clamp(1rem, 3vw, 2rem);
 }
 
-.psai_groups_nav a svg {
+.psai_groups_nav a .logo {
     transition: transform 0.3s ease;
     -webkit-transition: transform 0.3s ease;
     -moz-transition: transform 0.3s ease;
@@ -99,7 +115,7 @@
     -o-transition: transform 0.3s ease;
 }
 
-.psai_groups_nav a:hover svg {
+.psai_groups_nav .logo:hover {
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -113,25 +129,25 @@
 }
 
 .logo_anchor:hover .psai_groups_nav a:nth-child(1) {
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
 }
 .logo_anchor:hover .psai_groups_nav a:nth-child(2) {
-    transition-delay: 0.3s;
+    transition-delay: 0.25s;
 }
 .logo_anchor:hover .psai_groups_nav a:nth-child(3) {
-    transition-delay: 0.35s;
+    transition-delay: 0.3s;
 }
 .logo_anchor:hover .psai_groups_nav a:nth-child(4) {
-    transition-delay: 0.4s;
+    transition-delay: 0.35s;
 }
 .logo_anchor:hover .psai_groups_nav a:nth-child(5) {
-    transition-delay: 0.45s;
+    transition-delay: 0.4s;
 }
 .logo_anchor:hover .psai_groups_nav a:nth-child(6) {
-    transition-delay: 0.5s;
+    transition-delay: 0.45s;
 }
 .logo_anchor:hover .psai_groups_nav a:nth-child(7) {
-    transition-delay: 0.55s;
+    transition-delay: 0.5s;
 }
 
 .psai_groups_nav a svg {
@@ -186,6 +202,9 @@
 
 
 @media screen and (min-width: 1150px) {
+    .psai.logo {
+        font-size: 5.5rem;
+    }
 
     .logo_anchor .current_logo {
         position: absolute;
