@@ -108,22 +108,22 @@ ul.groups {
 .groups li a .group_shape {
     position: absolute;
     opacity: 0.08;
-    transition: opacity 1.2s ease;
-    -webkit-transition: opacity 1.2s ease;
-    -moz-transition: opacity 1.2s ease;
-    -ms-transition: opacity 1.2s ease;
-    -o-transition: opacity 1.2s ease;
+    transition: opacity 1.8s ease;
+    -webkit-transition: opacity 1.8s ease;
+    -moz-transition: opacity 1.8s ease;
+    -ms-transition: opacity 1.8s ease;
+    -o-transition: opacity 1.8s ease;
     width: clamp(23rem, 62vw, 32rem);
     height: clamp(23rem, 50vw, 29rem);
 }
 
 .groups li a:hover .group_shape {
     opacity: 1;
-    transition: opacity 0.6s 0.06s ease-in;
-    -webkit-transition: opacity 0.6s 0.06s ease-in;
-    -moz-transition: opacity 0.6s 0.06s ease-in;
-    -ms-transition: opacity 0.6s 0.06s ease-in;
-    -o-transition: opacity 0.6s 0.06s ease-in;
+    transition: opacity 0.5s 0.06s ease-in;
+    -webkit-transition: opacity 0.5s 0.06s ease-in;
+    -moz-transition: opacity 0.5s 0.06s ease-in;
+    -ms-transition: opacity 0.5s 0.06s ease-in;
+    -o-transition: opacity 0.5s 0.06s ease-in;
 }
 
 
