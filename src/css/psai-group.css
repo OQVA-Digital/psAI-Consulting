@@ -7,7 +7,7 @@ header, .hambt {
 }
 
 body {
-    background-color: #050f21;
+    background-color: #050110;
     border-inline: none;
 }
 
@@ -62,9 +62,10 @@ ul.groups {
     -moz-transition: opacity 0.8s 0.3s ease;
     -ms-transition: opacity 0.8s 0.3s ease;
     -o-transition: opacity 0.8s 0.3s ease;
-    position: relative;
-    top: clamp(4rem, 12vw, 7rem);
-    text-shadow: 0.3rem 0.3rem 0.3rem #030a21;
+    position: absolute;
+    top: 95%;
+    padding: 3rem;
+    background-image: radial-gradient(#050f21 24%, transparent 70%);
 }
 
 .groups li a:hover .definition {
@@ -172,9 +173,9 @@ ul.groups {
     }
 
     .groups li .definition {
-        position: absolute;
-        top: 100%;
+        top: 80%;
         opacity: 0;
+        width: 100%;
     }
 
     .groups li a:hover .definition {
