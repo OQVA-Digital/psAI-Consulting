@@ -71,11 +71,11 @@ ul.groups {
 
 .groups li a:hover .def {
     opacity: 1;
-    transition: opacity 3.8s 0.6s ease;
-    -webkit-transition: opacity 3.8s 0.6s ease;
-    -moz-transition: opacity 3.8s 0.6s ease;
-    -ms-transition: opacity 3.8s 0.6s ease;
-    -o-transition: opacity 3.8s 0.6s ease;
+    transition: opacity 3s 0.9s ease;
+    -webkit-transition: opacity 3s 0.9s ease;
+    -moz-transition: opacity 3s 0.9s ease;
+    -ms-transition: opacity 3s 0.9s ease;
+    -o-transition: opacity 3s 0.9s ease;
 }
 
 .groups li a {
@@ -119,11 +119,11 @@ ul.groups {
 
 .groups li a:hover .group_shape {
     opacity: 1;
-    transition: opacity 0.7s 0.16s ease-in;
-    -webkit-transition: opacity 0.7s 0.16s ease-in;
-    -moz-transition: opacity 0.7s 0.16s ease-in;
-    -ms-transition: opacity 0.7s 0.16s ease-in;
-    -o-transition: opacity 0.7s 0.16s ease-in;
+    transition: opacity 0.6s 0.06s ease-in;
+    -webkit-transition: opacity 0.6s 0.06s ease-in;
+    -moz-transition: opacity 0.6s 0.06s ease-in;
+    -ms-transition: opacity 0.6s 0.06s ease-in;
+    -o-transition: opacity 0.6s 0.06s ease-in;
 }
 
 

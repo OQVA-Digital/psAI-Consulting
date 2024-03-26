@@ -1,7 +1,7 @@
 ---
 	import { Image } from 'astro:assets';
 
-	const { currentGroupTheme, group } = Astro.props;
+	const { currentGroupTheme, group, noheader } = Astro.props;
 
     import '../css/header.css'
 	import Stripe from './Stripe.astro';
@@ -121,7 +121,7 @@
 
 	<button type="button" class="contact_bt">Contact us</button>
 </header>
-    
+
 <script>
 	import '../js/header.js'
 </script>
