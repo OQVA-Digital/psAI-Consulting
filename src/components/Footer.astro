@@ -1,4 +1,6 @@
 ---
+    const { group } = Astro.props;
+
     import '../css/footer.css'
 
     import { Image, getImage } from 'astro:assets';
@@ -7,26 +9,50 @@
 	import Stripe from './Stripe.astro';
 
     import Worm from './svg/graphics/Worm.astro';
+
+    import PsaiLogo from '../components/PsaiLogo.astro'
 ---
 
 <footer>
     <div class="width1">
         <div class="about">
-            <div class="logo graphic">
-                <Logo/>
-            </div>
+            <PsaiLogo group="group"/>
     
             <p class="tagline">Transform tomorrow’s uncertainties into identifiable opportunities.</p>
     
             <p class="legal">Copyright © 2024 psAI Consulting</p>
+
+            <div class="groups">
+                <a href="/consulting/">psAI Consulting</a>
+
+                <hr/>
+
+                <a href="/consulting/">psAI Dev</a>
+
+                <hr/>
+
+                <a href="/consulting/">psAI Labs</a>
+
+                <hr/>
+
+                <a href="/consulting/">psAI Events</a>
+
+                <hr/>
+
+                <a href="/consulting/">psAI Foundation</a>
+
+                <hr/>
+
+                <a href="/consulting/">psAI Education</a>
+            </div>
         </div>
     
         <nav>
-            <a href="/#home">Home </a>
+            <a href="/#home">Home</a>
 
             <a href="/services/">Services</a>
         
-            <a href="/#why-psai">Why psAI </a>
+            <a href="/#why-psai">Why psAI</a>
         
             <a href="/#the-psai-edge">The psAI edge</a>
         

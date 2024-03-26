@@ -2,11 +2,20 @@
     --group-logo-width: clamp(9rem, 28vmin, 11rem);
 }
 
-.psai.logo {
+.psai_groups_nav .psai.logo {
     font-size: clamp(3.5rem, 14vw, 5.5rem);
-    font-weight: 550;
-    position: relative;
+    font-weight: 400;
     width: fit-content;
+}
+
+.current_logo .psai.logo {
+    font-size: clamp(3.5rem, 14vw, 5.5rem);
+}
+
+.psai.logo {
+    position: relative;
+    font-weight: 300;
+    line-height: 0.85;
 } .psai.logo b {
     font-weight: 700;
 }
@@ -18,10 +27,14 @@
 }
 
 .psai.logo .group {
-    font-size: 0.33em;
-    position: absolute;
-    bottom:-1rem;
-    right:0;
+    font-size: 0.3em;
+    font-weight: 550;
+    letter-spacing: 0.05rem;
+    display: block;
+    text-align: right;
+    line-height: 1;
+    width: fit-content;
+    margin: 0 0 0 auto;
 }
 
 .logo_anchor .current_logo {
@@ -37,7 +50,7 @@
 }
 
 .logo_anchor .current_logo, .psai_groups_nav a {
-    width: var(--group-logo-width);
+    /* width: var(--group-logo-width); */
 }
 
 .logo_anchor.dark div.current_logo {
@@ -106,7 +119,7 @@
     -ms-transition: transform 1.2s ease, opacity 0.4s ease, visibility 0.4s ease;
     -o-transition: transform 1.2s ease, opacity 0.4s ease, visibility 0.4s ease;
     transition-delay: 0.1s;
-    padding-block: clamp(1rem, 3vw, 2rem);
+    padding-block: clamp(1rem, 3.3vw, 2rem);
 }
 
 .psai_groups_nav a .logo {
@@ -228,7 +241,7 @@
     }
 
     .logo_anchor .current_logo, .psai_groups_nav a {
-        width: clamp(2rem, 5.5vw, 10rem);
+        /* width: clamp(2rem, 5.5vw, 10rem); */
     }
 
 }

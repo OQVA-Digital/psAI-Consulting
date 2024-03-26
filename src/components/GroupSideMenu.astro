@@ -1,7 +1,7 @@
 ---
-import LogoGroups from "./svg/LogoGroups.astro";
+import PsAILogo from "../components/PsaiLogo.astro";
 
-import '../css/psai-groups.css'
+import '../css/groups-side-menu.css'
 
 const { currentGroupTheme, group } = Astro.props;
 
@@ -9,32 +9,32 @@ const { currentGroupTheme, group } = Astro.props;
 
 <div class={`logo_anchor ${currentGroupTheme ? currentGroupTheme : ""}`} aria-label="Return to home page">
 	<div class="current_logo">
-		<LogoGroups group={group}/>
+		<PsAILogo group={group}/>
 	</div>
 
 	<div class="psai_groups_nav">
 		<a href="/consulting/" class="">
-			<LogoGroups group="consulting"/>
+			<PsAILogo group="consulting"/>
 		</a>
 
 		<a href="/labs/">
-			<LogoGroups group="labs"/>
+			<PsAILogo group="labs"/>
 		</a>
 		
 		<a href="/dev/">
-			<LogoGroups group="dev"/>
+			<PsAILogo group="dev"/>
 		</a>
 		
 		<a href="/events/">
-			<LogoGroups group="events"/>
+			<PsAILogo group="events"/>
 		</a>
 		
 		<a href="/foundation/">
-			<LogoGroups group="foundation"/>
+			<PsAILogo group="foundation"/>
 		</a>
 		
 		<a href="/education/">
-			<LogoGroups group="education"/>
+			<PsAILogo group="education"/>
 		</a>
 	</div>
 	

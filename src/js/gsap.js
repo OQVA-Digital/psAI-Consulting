@@ -18,8 +18,8 @@ gsap.registerPlugin(ScrollTrigger);
 // anim01.from(".default1 .list .item", {x: 1300, opacity:0, duration: 1, ease: "power1.out",})
 
 const graphics = document.querySelectorAll('.graphic, .logo')
-const serviceLogos = document.querySelectorAll('svg.service_logo')
-const serviceLogosOutHeader = document.querySelectorAll('main svg.service_logo')
+const serviceShapesSVGs = document.querySelectorAll('.service_shape, .group_shape')
+const serviceShapesOutHeader = document.querySelectorAll('main svg.service_shape')
 
 const relativeStrokeWidth = Math.floor((window.innerHeight + (window.innerWidth / 5)) / 580)
 
@@ -33,20 +33,21 @@ for(let j = 0; j < graphics.length; j++) {
     }
 }
 
-for(let j = 0; j < serviceLogos.length; j++) {
-    let pulsePaths = serviceLogos[j].querySelectorAll('.pulse')
+for(let j = 0; j < serviceShapesSVGs.length; j++) {
+    let pulsePaths = serviceShapesSVGs[j].querySelectorAll('.pulse')
 
     for(let i = 0; i < pulsePaths.length; i++) {
         pulsePaths[i].style.animationDelay = `${i / 9}s`
+        pulsePaths[i].style.strokeWidth = `${relativeStrokeWidth}px`
     }
 }
 
-for(let k = 0; k < serviceLogosOutHeader.length; k++) {
-    let serviceLogosOutHeaderPaths = serviceLogosOutHeader[k].querySelectorAll('.pulse')
+for(let k = 0; k < serviceShapesOutHeader.length; k++) {
+    let serviceShapesOutHeaderPaths = serviceShapesOutHeader[k].querySelectorAll('.pulse')
 
-    for(let i = 0; i < serviceLogosOutHeaderPaths.length; i++) {
-        serviceLogosOutHeaderPaths[i].style.animationDelay = `${i / 15}s`
-        serviceLogosOutHeaderPaths[i].style.strokeWidth = `${relativeStrokeWidth}px`
+    for(let i = 0; i < serviceShapesOutHeaderPaths.length; i++) {
+        serviceShapesOutHeaderPaths[i].style.animationDelay = `${i / 15}s`
+        serviceShapesOutHeaderPaths[i].style.strokeWidth = `${relativeStrokeWidth}px`
     }
 }
 

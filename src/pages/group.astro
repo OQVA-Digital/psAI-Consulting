@@ -2,174 +2,80 @@
 
 import Layout from '../layouts/Layout.astro';
 
-import Logo from '../components/svg/Logo.astro';
-import LogoWaves from '../components/svg/LogoWaves.astro';
-import LogoGroups from '../components/svg/LogoGroups.astro';
-
 import { Schema } from "astro-seo-schema"
 
-import Graphic01 from '../components/svg/graphics/Graphic01.astro';
-import ProblemGraphic from '../components/svg/graphics/ProblemGraphic.astro';
-import Graphic02 from '../components/svg/graphics/Graphic02.astro';
-import Graphic03 from '../components/svg/graphics/Graphic03.astro';
-import Graphic04 from '../components/svg/graphics/Graphic04.astro';
-import Graphic05 from '../components/svg/graphics/Graphic05.astro';
-import Graphic06 from '../components/svg/graphics/Graphic06.astro';
-import Graphic07 from '../components/svg/graphics/Graphic07.astro';
-
 import Worm from '../components/svg/graphics/Worm.astro'
-import CornerGraphic01 from '../components/svg/graphics/CornerGraphic01.astro';
-import CornerGraphic02 from '../components/svg/graphics/CornerGraphic02.astro';
 
-import { Image, getImage } from 'astro:assets';
+import LabsShape from '../components/svg/psai-group-shapes/LabsShape.astro';
+import EventsShape from '../components/svg/psai-group-shapes/EventsShape.astro'
+import DevShape from '../components/svg/psai-group-shapes/DevShape.astro';
+import FoundationShape from '../components/svg/psai-group-shapes/FoundationShape.astro';
+import EducationShape from '../components/svg/psai-group-shapes/EducationShape.astro';
+import ConsultingShape from '../components/svg/psai-group-shapes/ConsultingShape.astro';
 
-import AndreiCroitor from "../assets/team/andrei-croitor.jpg";
-import JasonGeorge from "../assets/team/jason-george.jpg";
-import NdaliLiitaCairney from "../assets/team/ndali-liita-cairney.jpg";
-import RayhanBeebeejaun from "../assets/team/rayhan.beebeejaun.jpg";
-import TsvetelinAnastasov from "../assets/team/tsvetelin-anastasov.jpg";
+import '../css/psai-group.css'
 
-import Analysis from '../components/svg/icons/Analysis.astro'
-import Chart from '../components/svg/icons/Chart.astro'
-import HeartBeat from '../components/svg/icons/HeartBeat.astro'
-import Idea from '../components/svg/icons/Idea.astro'
-import List from '../components/svg/icons/List.astro'
-import Strategy from '../components/svg/icons/Strategy.astro'
-
-
-import Define from '../components/svg/services/DefineSVG.astro'
-// import Align from '../components/svg/services/AlignSVG.astro'
-import Flow from '../components/svg/services/FlowSVG.astro'
-import Run from '../components/svg/services/RunSVG.astro'
+import PsaiLogo from '../components/PsaiLogo.astro'
 ---
 
-<style>
-    body::before {
-        background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-30deg, #0e0925, #060823);
-    }
-</style>
-
-<Layout logoAnchorTheme="dark">
-<main>
-    <section class="centered padding">
-        <div class="ctnr">
-            <h1 class="psai_group_logo">psAI <span class="group_name">Group</span></h1>
-    
-            <div class="groups">
-                
+<Layout logoAnchorTheme="dark" nofooter noheader>
+    <main>
+        <section class="centered padding">
+            <div class="ctnr">
+                <!-- <h1>
+                    <PsaiLogo group="group"/>
+                </h1> -->
+        
+                <ul class="groups slow_reveal">
+                    <li class="consulting">
+                        <a href="/consulting/">
+                            <ConsultingShape/>
+                            <PsaiLogo group="consulting"/>
+                            <h2 class="definition">Embrace innovation. Define the future.</h2>
+                        </a>
+                    </li>
+                    
+                    <li class="dev">
+                        <a href="/dev/">
+                            <DevShape/>
+                            <PsaiLogo group="dev"/>
+                            <h2 class="definition">Unleash innovation. Craft the future. Navigate the AI landscape with precision.</h2>
+                        </a>
+                    </li>
+                    
+                    <li class="labs">
+                        <a href="/labs/">
+                            <LabsShape/>
+                            <PsaiLogo group="labs"/>
+                            <h2 class="definition">Empower growth. Enable innovation. Foster a future-ready workforce.</h2>
+                        </a>
+                    </li>
+                    
+                    <li class="events">
+                        <a href="/events/">
+                            <EventsShape/>
+                            <PsaiLogo group="events"/>
+                            <h2 class="definition">Connect. Share. Inspire. Building the AI community one event at a time.</h2>
+                        </a>
+                    </li>
+                    
+                    <li class="foundation">
+                        <a href="/foundation/">
+                            <FoundationShape/>
+                            <PsaiLogo group="foundation"/>
+                            <h2 class="definition">Research. Innovate. Apply. Bridging the gap between theory and practice in AI.</h2>
+                        </a>
+                    </li>
+                    
+                    <li class="education">
+                        <a href="/education/">
+                            <EducationShape/>
+                            <PsaiLogo group="education"/>
+                            <h2 class="definition">Learn. Understand. Implement. Making AI accessible to all.</h2>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </section>
-</main>
-
-<Schema
-    item={
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name":"psAI Consulting - Unlock the Potential of AI Integration",
-        "url":`${Astro.url}`,
-        "description":"AI integration and analysis through a blend of agility, insight, and innovation. Transform uncertainties into identifiable opportunities with AI implementation.",
-    }
-    }
-/>
-
-<Schema
-    item={
-    {
-        "@context": "https://schema.org",
-        "@type":"WebSite",
-        "name":"psAI Consulting",
-        "url":`${Astro.url}`,
-    }
-    }
-/>
-
-<Schema
-    item={
-    {
-        "@context": "https://schema.org",
-        "@type":"Organization",
-        "name":"psAI Consulting",
-        "legalName":"psAI Consulting",
-        "url":`${Astro.url}`,
-        "@id":`${Astro.url}`,
-    }
-    }
-/>
+        </section>
+    </main>
 </Layout>
-
-<!-- <script is:inline>
-const header = document.querySelector('header');
-const hamBt = document.querySelector(".hambt");
-const nav = document.querySelector("header");
-const navBts = document.querySelectorAll("header a, header button");
-const exitArea = document.querySelector('.exit_area');
-const contactBox = document.querySelector('section.contact');
-const contactBts = document.querySelectorAll('.contact_bt');
-const pulsePaths = document.querySelectorAll('.pulse');
-
-let showingNav = false;
-let showingContactBox = false;
-
-function toggleExitArea() {
-exitArea.classList.toggle('show', showingContactBox || showingNav);
-}
-
-function toggleNav() {
-showingNav = !showingNav;
-hamBt.classList.toggle('active', showingNav);
-nav.classList.toggle("show", showingNav);
-toggleExitArea();
-
-controlPathAnimation(showingNav ? 'paused' : 'running');
-
-if (showingContactBox) {
-    toggleContactBox();
-}
-}
-
-function controlPathAnimation(state) {
-pulsePaths.forEach(path => path.style.animationPlayState = state);
-}
-
-function toggleContactBox() {
-showingContactBox = !showingContactBox;
-contactBox.classList.toggle('show', showingContactBox);
-controlPathAnimation(showingContactBox ? 'paused' : 'running');
-toggleExitArea();
-}
-
-hamBt.addEventListener("click", toggleNav);
-
-if (window.matchMedia('(max-width:850px)').matches) {
-navBts.forEach(btn => {
-    btn.addEventListener("click", () => {
-        toggleNav();
-        if (showingContactBox) {
-            toggleContactBox();
-        }
-    });
-});
-}
-
-window.addEventListener("scroll", () => {
-if (showingNav) {
-    toggleNav();
-}
-});
-
-contactBts.forEach(btn => {
-btn.addEventListener('click', toggleContactBox);
-});
-
-exitArea.addEventListener('click', () => {
-if (showingContactBox) {
-    toggleContactBox();
-} else if (showingNav) {
-    toggleNav();
-}
-});
-
-</script> -->
-

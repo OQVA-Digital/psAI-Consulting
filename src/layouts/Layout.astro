@@ -1,5 +1,5 @@
 ---
-const { title, description, keywords, currentGroupTheme } = Astro.props;
+const { title, description, keywords, currentGroupTheme, group, noheader, nofooter } = Astro.props;
 
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from "../../consts";
 
@@ -26,18 +26,21 @@ import ContactBox from '../components/ContactBox.astro';
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-587VFLN8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
-		<Header currentGroupTheme={currentGroupTheme}/>
-
-		<MailBubble/>
+		{noheader ? ("") : (
+			<Header currentGroupTheme={currentGroupTheme}/>
+			<MailBubble/>
+		)}
 
 		<slot/>
 
-		<Footer/>
+		{nofooter ? ("") : (
+			<Footer/>
+			
+			<OQVABadge/>
+		)}
 
         <CookieConsentBanner/>
 
 		<ContactBox/>
-		
-		<OQVABadge/>
 	</body>
 </html>
