@@ -51,11 +51,11 @@ ul.groups {
     justify-content: center;
 }
 
-.groups li .definition {
+.groups li .def {
     text-align: center;
     max-width: clamp(20rem, 80vw, 33rem);
     font-weight: 100;
-    font-size: clamp(1.5rem, 4.3vw, 1.8rem);
+    font-size: clamp(1.5rem, 4.3vw, 2rem);
     opacity: 1;
     transition: opacity 0.8s 0.3s ease;
     -webkit-transition: opacity 0.8s 0.3s ease;
@@ -66,15 +66,16 @@ ul.groups {
     top: 95%;
     padding: 3rem;
     background-image: radial-gradient(#050f21 24%, transparent 70%);
+    width: 100%;
 }
 
-.groups li a:hover .definition {
+.groups li a:hover .def {
     opacity: 1;
-    transition: opacity 1.5s 0s ease;
-    -webkit-transition: opacity 1.5s 0s ease;
-    -moz-transition: opacity 1.5s 0s ease;
-    -ms-transition: opacity 1.5s 0s ease;
-    -o-transition: opacity 1.5s 0s ease;
+    transition: opacity 2.8s 0.3s ease;
+    -webkit-transition: opacity 2.8s 0.3s ease;
+    -moz-transition: opacity 2.8s 0.3s ease;
+    -ms-transition: opacity 2.8s 0.3s ease;
+    -o-transition: opacity 2.8s 0.3s ease;
 }
 
 .groups li a {
@@ -101,7 +102,7 @@ ul.groups {
     width: fit-content;
     display: block;
     background-image: radial-gradient(#050f21 24%, transparent 62%);
-    padding: clamp(1rem, 13vw, 7rem) clamp(1rem, 9vw, 8rem) 0;
+    padding: clamp(1rem, 14vw, 7rem) clamp(1rem, 9vw, 8rem);
 }
 
 .groups li a .group_shape {
@@ -172,13 +173,13 @@ ul.groups {
         padding: clamp(1rem, 13vw, 7rem) clamp(1rem, 9vw, 8rem);
     }
 
-    .groups li .definition {
+    .groups li .def {
         top: 80%;
         opacity: 0;
         width: 100%;
     }
 
-    .groups li a:hover .definition {
+    .groups li a:hover .def {
         opacity: 1;
     }
 }
