@@ -1,0 +1,164 @@
+---
+import '../css/group-home.css'
+
+import Layout from '../layouts/Layout.astro';
+
+import Logo from '../components/svg/Logo.astro';
+import LogoWaves from '../components/svg/LogoWaves.astro';
+import PsaiLogo from '../components/PsaiLogo.astro';
+
+import { Schema } from "astro-seo-schema"
+
+import Graphic06 from '../components/svg/graphics/Graphic06.astro';
+import LabsShape from '../components/svg/psai-group-shapes/LabsShape.astro';
+
+import Worm from '../components/svg/graphics/Worm.astro'
+
+import { Image, getImage } from 'astro:assets';
+
+import Define from '../components/svg/services/DefineSVG.astro'
+// import Align from '../components/svg/services/AlignSVG.astro'
+import Flow from '../components/svg/services/FlowSVG.astro'
+import Run from '../components/svg/services/RunSVG.astro'
+---
+
+<Layout headerLogoTheme="dark" group="labs">
+<main>
+	<section class="intro centered padding">
+		<div class="waves big graphic">
+			<LabsShape/>
+		</div>
+
+		<div class="ctnr width1">
+			<div class="logo">
+				<PsaiLogo/>
+			</div>
+
+			<h1><span class="step_reveal1">Empower growth. Enable innovation.</span> <span class="step_reveal1"><b>Foster a future-ready workforce.</b></span></h1>
+
+			<h2 class="step_reveal1">Transform tomorrow’s uncertainties into identifiable opportunities.</h2>
+
+			<div class="cta_ctnr flex step_reveal1">
+				<a href="/services/define" class="cta dark">Take the first step</a>
+
+				<button type="button" class="main cta contact_bt">Contact us</button>
+			</div>
+
+			<!-- <div class="graphic g1">
+				<Graphic02/>
+			</div> -->
+			<!-- <Graphic03/> -->
+		</div>
+	</section>
+</main>
+
+<Schema
+	item={
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name":"psAI Consulting - Unlock the Potential of AI Integration",
+		"url":`${Astro.url}`,
+		"description":"AI integration and analysis through a blend of agility, insight, and innovation. Transform uncertainties into identifiable opportunities with AI implementation.",
+	}
+	}
+/>
+
+<Schema
+	item={
+	{
+		"@context": "https://schema.org",
+		"@type":"WebSite",
+		"name":"psAI Consulting",
+		"url":`${Astro.url}`,
+	}
+	}
+/>
+
+<Schema
+	item={
+	{
+		"@context": "https://schema.org",
+		"@type":"Organization",
+		"name":"psAI Consulting",
+		"legalName":"psAI Consulting",
+		"url":`${Astro.url}`,
+		"@id":`${Astro.url}`,
+	}
+	}
+/>
+</Layout>
+
+<!-- <script is:inline>
+const header = document.querySelector('header');
+const hamBt = document.querySelector(".hambt");
+const nav = document.querySelector("header");
+const navBts = document.querySelectorAll("header a, header button");
+const exitArea = document.querySelector('.exit_area');
+const contactBox = document.querySelector('section.contact');
+const contactBts = document.querySelectorAll('.contact_bt');
+const pulsePaths = document.querySelectorAll('.pulse');
+
+let showingNav = false;
+let showingContactBox = false;
+
+function toggleExitArea() {
+exitArea.classList.toggle('show', showingContactBox || showingNav);
+}
+
+function toggleNav() {
+showingNav = !showingNav;
+hamBt.classList.toggle('active', showingNav);
+nav.classList.toggle("show", showingNav);
+toggleExitArea();
+
+controlPathAnimation(showingNav ? 'paused' : 'running');
+
+if (showingContactBox) {
+	toggleContactBox();
+}
+}
+
+function controlPathAnimation(state) {
+pulsePaths.forEach(path => path.style.animationPlayState = state);
+}
+
+function toggleContactBox() {
+showingContactBox = !showingContactBox;
+contactBox.classList.toggle('show', showingContactBox);
+controlPathAnimation(showingContactBox ? 'paused' : 'running');
+toggleExitArea();
+}
+
+hamBt.addEventListener("click", toggleNav);
+
+if (window.matchMedia('(max-width:850px)').matches) {
+navBts.forEach(btn => {
+	btn.addEventListener("click", () => {
+		toggleNav();
+		if (showingContactBox) {
+			toggleContactBox();
+		}
+	});
+});
+}
+
+window.addEventListener("scroll", () => {
+if (showingNav) {
+	toggleNav();
+}
+});
+
+contactBts.forEach(btn => {
+btn.addEventListener('click', toggleContactBox);
+});
+
+exitArea.addEventListener('click', () => {
+if (showingContactBox) {
+	toggleContactBox();
+} else if (showingNav) {
+	toggleNav();
+}
+});
+
+</script> -->

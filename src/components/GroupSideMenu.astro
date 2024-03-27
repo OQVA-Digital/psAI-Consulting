@@ -3,11 +3,11 @@ import PsAILogo from "../components/PsaiLogo.astro";
 
 import '../css/groups-side-menu.css'
 
-const { currentGroupTheme, group } = Astro.props;
+const { headerLogoTheme, group } = Astro.props;
 
 ---
 
-<div class={`logo_anchor ${currentGroupTheme ? currentGroupTheme : ""}`} aria-label="Return to home page">
+<div class={`logo_anchor ${headerLogoTheme ? headerLogoTheme : ""}`} aria-label="Return to home page">
 	<div class="current_logo">
 		<PsAILogo group={group}/>
 	</div>

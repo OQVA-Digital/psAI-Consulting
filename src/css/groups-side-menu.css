@@ -26,9 +26,13 @@
     font-weight: 550;
 }
 
+.light .current_logo .psai.logo .group {
+    font-weight: 400;
+}
+
 .psai.logo .group {
     font-size: 0.3em;
-    font-weight: 550;
+    font-weight: 600;
     letter-spacing: 0.05rem;
     display: block;
     text-align: right;

@@ -71,11 +71,11 @@ ul.groups {
 
 .groups li a:hover .def {
     opacity: 1;
-    transition: opacity 3s 0.9s ease;
-    -webkit-transition: opacity 3s 0.9s ease;
-    -moz-transition: opacity 3s 0.9s ease;
-    -ms-transition: opacity 3s 0.9s ease;
-    -o-transition: opacity 3s 0.9s ease;
+    transition: opacity 3s 0.5s ease;
+    -webkit-transition: opacity 3s 0.5s ease;
+    -moz-transition: opacity 3s 0.5s ease;
+    -ms-transition: opacity 3s 0.5s ease;
+    -o-transition: opacity 3s 0.5s ease;
 }
 
 .groups li a {
